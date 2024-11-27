@@ -27,6 +27,15 @@ apply plugin: 'kotlin-android'
 android {
     compileSdkVersion 33
 
+     compileOptions {
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_21.toString()
+    }
+
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
